@@ -27,7 +27,7 @@ document.getElementById('dni-form').addEventListener('submit', async function(e)
   };
 
   try {
-    await fetch('https://script.google.com/macros/s/AKfycbwleb4yyh1W2RHFHh0qXIsZaoaw2TgROy5PKbXndQjrsbvtYguxvHDbPZXJwSYbUheD/exec', {
+    await fetch('https://script.google.com/macros/s/AKfycby5qEzBptI0MBdB3fd7co7lyCbxysag7zQ29xXfqpmeW8dkmwl4oaA1ZO5IwbPV481L/exec', {
       method: 'POST',
       body: JSON.stringify(data),
       headers: { 'Content-Type': 'application/json' },

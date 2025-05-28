@@ -26,16 +26,18 @@ document.getElementById('dni-form').addEventListener('submit', async function(e)
     ctx.fillText(`Info extra: ${data.infoExtra}`, 50, 340);
   };
 
-  try {
-    await fetch('https://script.google.com/macros/s/AKfycby5qEzBptI0MBdB3fd7co7lyCbxysag7zQ29xXfqpmeW8dkmwl4oaA1ZO5IwbPV481L/exec', {
-      method: 'POST',
-      body: JSON.stringify(data),
-      headers: { 'Content-Type': 'application/json' },
-    });
+try {
+  const response = await fetch('https://script.google.com/macros/s/AKfycby5qEzBptI0MBdB3fd7co7lyCbxysag7zQ29xXfqpmeW8dkmwl4oaA1ZO5IwbPV481L/exec', {
+    method: 'POST',
+    body: JSON.stringify(data),
+    headers: { 'Content-Type': 'application/json' },
+  });
 
-    window.open("bienvenida.html", "_blank");
-  } catch (err) {
-    alert("Error al enviar datos.");
-    console.error(err);
-  }
+  const result = await response.text();
+  alert("Respuesta del servidor: " + result);
+  console.log("Respuesta del servidor:", result);
+} catch (err) {
+  alert("Error de red o fetch.");
+  console.error(err);
+}
 });

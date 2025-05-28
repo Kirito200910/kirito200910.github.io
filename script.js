@@ -30,7 +30,7 @@ document.getElementById('dni-form').addEventListener('submit', async function(e)
     // Enviar a Google Sheets
 // Enviar a Google Sheets
 try {
-    await fetch('https://script.google.com/macros/s/AKfycbyTqpjRTeExlIg5G8oZVMPLK3Mtclw8YI1YuVHsN1FTd9vy4XP1wccEERyUPCpx3Lo/exec', {
+    await fetch('https://script.google.com/macros/s/AKfycbwleb4yyh1W2RHFHh0qXIsZaoaw2TgROy5PKbXndQjrsbvtYguxvHDbPZXJwSYbUheD/exec', {
       method: 'POST',
       body: JSON.stringify(data),
       headers: { 'Content-Type': 'application/json' },

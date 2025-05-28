@@ -1,4 +1,4 @@
-<!-- index.html -->
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,23 +8,26 @@
   <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>🥖 Generador de DNI - Reino de Pan 🥖</h1>
+  <h1>🥖 Generador de DNI - Reino de Pan 🥖</h1>
 
-  <form id="dni-form">
-    <label>Nombre: <input type="text" name="nombre" required></label>
-    <label>Sexo (M/F): <input type="text" name="sexo" required></label>
-    <label>Nacionalidad: <input type="text" name="nacionalidad" required></label>
-    <label>Fecha de nacimiento: <input type="date" name="fechaNacimiento" required></label>
-    <label>Lugar de nacimiento: <input type="text" name="lugarNacimiento" required></label>
-    <label>Número de DNI: <input type="text" name="numeroDNI" required></label>
-    <label>Técnica de autenticidad: <input type="text" name="tecnica" required></label>
-    <label>Fecha de caducidad: <input type="date" name="caducidad" required></label>
-    <label>Información personal voluntaria: <textarea name="infoExtra"></textarea></label>
+  <div class="container">
+    <div class="dni-preview">
+      <canvas id="dniCanvas" width="600" height="400"></canvas>
+    </div>
 
-    <button type="submit">Generar DNI</button>
-  </form>
-
-  <canvas id="dniCanvas" width="600" height="400"></canvas>
+    <form id="dni-form">
+      <label>Nombre: <input type="text" name="nombre" required></label>
+      <label>Sexo (M/F): <input type="text" name="sexo" required></label>
+      <label>Nacionalidad: <input type="text" name="nacionalidad" required></label>
+      <label>Fecha de nacimiento: <input type="date" name="fechaNacimiento" required></label>
+      <label>Lugar de nacimiento: <input type="text" name="lugarNacimiento" required></label>
+      <label>Número de DNI: <input type="text" name="numeroDNI" required></label>
+      <label>Técnica de autenticidad: <input type="text" name="tecnica" required></label>
+      <label>Fecha de caducidad: <input type="date" name="caducidad" required></label>
+      <label>Información personal voluntaria: <textarea name="infoExtra"></textarea></label>
+      <button type="submit">Generar DNI</button>
+    </form>
+  </div>
 
   <script src="script.js"></script>
 </body>
